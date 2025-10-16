@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BBB英会話スクール</title>
+    <meta name="description" content="Codejumpでの模写練習バニラJS版">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- ogp -->
+    <meta property="og:site_name" content="BBB英会話スクール">
+    <meta property="og:url" content="https://example.com/">
+    <meta property="og:type" content="website"> <!-- トップページはwebsite、それ以外はarticle -->
+    <meta property="og:title" content="BBB英会話スクール">
+    <meta property="og:description" content="Codejumpでの模写練習">
+    <meta property="og:image" content="https://example.com/image/ogp.jpg"> <!-- シェアされた時に表示する画像、1200px*630px、正方形にトリミングされるので主要コンテンツを中央に -->
+    <meta property="og:locale" content="ja_JP">
+
+    <!-- CSSリセット -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- favicon -->
+    <link rel="icon" href="./image/favicon.ico">
+
+    <!-- js -->
+    <script src="./js/main.js" defer="defer"></script> <!-- 末尾にdeferを入れて最後に読み込みをさせる -->
+
+    <!-- 事前読み込み -->
+    <link rel="preload" as="image" href="./image/logo.png">
+    <link rel="preload" as="image" href="./image/mainvisual01.jpg">
+
+  </head>
+
+  <body>
+
+    <main>
+
+      <header class="header">
+        <h1 class="header__title">
+          <a href="index.html">
+            <img src="./image/logo.png" width="100" height="57" alt="BBB 英会話スクール" decoding="async">
+          </a>
+        </h1>
+        <div class="header__button-wrap">
+          <div class="header__button--hamburger js-hamburger-button" aria-controls="global-nav">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <nav id="global-nav" class="header__nav js-hamburger-menu">
+          <div class="header__title">
+            <a href="index.html">
+              <img src="./image/logo_white.png" width="100" height="57" alt="BBB 英会話スクール" decoding="async">
+            </a>
+          </div>
+          <ul class="header__list">
+            <li class="header__item"><a href="#reason">BBBが選ばれる理由</a></li>
+            <li class="header__item"><a href="#voice">受講生の声</a></li>
+            <li class="header__item"><a href="#summary">スクールの概要</a></li>
+            <li class="header__item header__item--request"><a href="javascript:void(0)">無料体験に申し込む</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="catch-container">
+        <div class="catch-wrap">
+          <p class="catch">話して学ぼう！<span>BBB英会話スクール</span></p>
+          <div class="catch__button">
+            <a href="javascript:void(0)">無料体験はこちら</a>
+          </div>
+        </div>
+        <div class="main-visual js-slider">
+          <img src="./image/mainvisual01.jpg" alt="" width="1920" height="1080" decoding="async">
+          <img src="./image/mainvisual02.jpg" alt="" width="1920" height="1280" decoding="async">
+          <img src="./image/mainvisual03.jpg" alt="" width="1920" height="1280" decoding="async">
+        </div>
+      </div>
+
+      <!-- section-reason -->
+      <section id="reason" class="reason">
+        <h2 class="reason__title section__title">BBBが選ばれる理由</h2>
+        <div class="reason__contents">
+          <div class="reason__inner reason__inner--interaction js-fade-in">
+            <div class="reason__icon">
+              <img src="./image/icon-pc.png" width="174" height="120" alt="" decoding="async">
+            </div>
+            <div class="reason__text-area">
+              <p class="reason__catch">オンライン対応</p>
+              <p class="reason__note">24時間いつでも受講できる！</p>
+            </div>
+          </div>
+          <div class="reason__inner reason__inner--teacher js-fade-in">
+            <div class="reason__icon">
+              <img src="./image/icon-teacher.png" width="101" height="120" alt="" decoding="async">
+            </div>
+            <div class="reason__text-wrap">
+              <p class="reason__catch">講師はネイティブ</p>
+              <p class="reason__note">お気に入りの講師が自由に選べる！</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section-voice -->
+      <section id="voice" class="voice">
+        <h2 class="voice__title section__title">受講生の声</h2>
+        <div class="voice__contents">
+          <ul class="voice__list">
+            <li class="voice__item js-fade-in">
+              <div class="voice__student">
+                <div class="voice__icon">
+                  <img src="./image/icon-student1.png" width="240" height="240" alt="" decoding="async">
+                </div>
+                <p class="voice__student-name">
+                  <span>○○○さん</span>
+                  <span>大学生</span>
+                </p>
+              </div>
+              <div class="voice__text-wrap">
+                <p class="voice__text">
+                  <span>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</span>
+                  <span>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</span>
+                </p>
+              </div>
+            </li>
+            <li class="voice__item js-fade-in">
+              <div class="voice__student">
+                <div class="voice__icon">
+                  <img src="./image/icon-student2.png" width="240" height="240" alt="" decoding="async">
+                </div>
+                <p class="voice__student-name">
+                  <span>○○○さん</span>
+                  <span>会社員</span>
+                </p>
+              </div>
+              <div class="voice__text-wrap">
+                <p class="voice__text">
+                  <span>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</span>
+                  <span>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</span>
+                </p>
+              </div>
+            </li>
+            <li class="voice__item js-fade-in">
+              <div class="voice__student">
+                <div class="voice__icon">
+                  <img src="./image/icon-student3.png" width="240" height="240" alt="" decoding="async">
+                </div>
+                <p class="voice__student-name">
+                  <span>○○○さん</span>
+                  <span>自営業</span>
+                </p>
+              </div>
+              <div class="voice__text-wrap">
+                <p class="voice__text">
+                  <span>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</span>
+                  <span>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</span>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- section-summary -->
+      <section id="summary" class="summary">
+        <div class="summary__container">
+          <h2 class="summary__title section__title">スクールの概要</h2>
+          <div class="summary__contents">
+            <ul class="summary__list">
+              <li class="summary__item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener noreferrer"> <!-- 安全対策として「rel="noopener noreferrer"」を追加 -->
+                  <h3 class="summary__item-title">レッスン内容</h3>
+                  <p class="summary__item-note">LESSON</p>
+                  <p class="summary__item-description">テキストテキストテキストテキスト<span>テキストテキストテキストテキスト</span>テキスト</p>
+                </a>
+              </li>
+              <li class="summary__item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener noreferrer">
+                  <h3 class="summary__item-title">料金プラン</h3>
+                  <p class="summary__item-note">PRICE</p>
+                  <p class="summary__item-description">テキストテキストテキストテキスト<span>テキストテキストテキストテキスト</span>テキスト</p>
+                </a>
+              </li>
+              <li class="summary__item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener noreferrer">
+                  <h3 class="summary__item-title">講師のご紹介</h3>
+                  <p class="summary__item-note">TEACHER</p>
+                  <p class="summary__item-description">テキストテキストテキストテキスト<span>テキストテキストテキストテキスト</span>テキスト</p>
+                </a>
+              </li>
+              <li class="summary__item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener noreferrer">
+                  <h3 class="summary__item-title">BBBのQ&A</h3>
+                  <p class="summary__item-note">Q&A</p>
+                  <p class="summary__item-description">テキストテキストテキストテキスト<span>テキストテキストテキストテキスト</span>テキスト</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- section-proposal -->
+      <section class="proposal">
+        <div class="proposal__container">
+          <h2 class="proposal__title">まずは無料で、BBBの英会話を試してみませんか？</h2>
+          <p class="proposal__note">今なら初月のレッスンを特別価格で受講できる割引クーポンをプレゼント！</p>
+          <div class="proposal-button">
+            <a href="javascript:void(0)">無料体験に申し込む</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <p class="footer__item-title">コース一覧</p>
+            <ul class="footer__link">
+              <li class="footer__link-item"><a href="javascript:void(0)">スタンダードプラン</a></li>
+              <li class="footer__link-item"><a href="javascript:void(0)">プレミアムプラン</a></li>
+              <li class="footer__link-item"><a href="javascript:void(0)">短期集中プラン</a></li>
+              <li class="footer__link-item"><a href="javascript:void(0)">日常英会話コース</a></li>
+              <li class="footer__link-item"><a href="javascript:void(0)">ビジネス英会話コース</a></li>
+            </ul>
+          </li>
+          <li class="footer__item">
+            <p class="footer__item-title">講師紹介</p>
+            <ul class="footer__link">
+              <li class="footer__link-item"><a href="javascript:void(0)">講師について</a></li>
+              <li class="footer__link-item"><a href="javascript:void(0)">講師一覧</a></li>
+              <li class="footer__link-item"><a href="javascript:void(0)">講師を探す</a></li>
+            </ul>
+          </li>
+          <li class="footer__item">
+            <p class="footer__item-title">会社情報</p>
+            <ul class="footer__link">
+              <li class="footer__link-item"><a href="javascript:void(0)">会社概要</a></li>
+              <li class="footer__link-item"><a href="javascript:void(0)">採用情報</a></li>
+            </ul>
+          </li>
+          <li class="footer__item">
+            <p class="footer__item-title">BBBについて</p>
+            <ul class="footer__link">
+              <li class="footer__link-item"><a href="javascript:void(0)">よくあるご質問</a></li>
+              <li class="footer__link-item"><a href="javascript:void(0)">ご利用規約</a></li>
+              <li class="footer__link-item"><a href="javascript:void(0)">プライバシーポリシー</a></li>
+              <li class="footer__link-item"><a href="javascript:void(0)">お問い合わせ</a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+
+      <small class="footer__copyright">&copy; BBB English School</small>
+    </footer>
+
+  </body>
+
+
+
+</html>
